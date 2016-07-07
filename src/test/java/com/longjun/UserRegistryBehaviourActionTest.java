@@ -36,15 +36,6 @@ public class UserRegistryBehaviourActionTest {
     @Test
     public void should_mark_status_to_complete_when_xiaomishu_send_result_is_true() throws KeyManagementException, NoSuchAlgorithmException,
             KeyStoreException, IOException {
-        //Given
-        UserFilteredForAction userFilteredForAction = userFilteredForActionRepository.save(new UserFilteredForAction(111, new Date(),
-                TO_BE_ACTION, null));
 
-        //When
-        service.execute();
-
-        //Then
-        assertThat(userFilteredForActionRepository.findOne(userFilteredForAction.getId()).getStatus(), is
-                (UserFilteredForAction.Status.ACTION_COMPLETE));
     }
 }
