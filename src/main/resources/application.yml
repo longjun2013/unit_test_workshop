@@ -1,0 +1,30 @@
+#服务信息
+info:
+    app:
+        name: unit-test-workshop
+
+
+
+#默认环境配置
+server:
+    port: 8080
+logging:
+    file: /logs/unit-test-workshop/app.log
+management:
+    context-path: /manage
+
+
+
+spring:
+    #数据库
+    datasource:
+        url: jdbc:mysql://192.168.10.22:33306/automate_operation?useUnicode=true&amp;characterEncoding=UTF-8
+        username: root
+        driver-class-name: com.mysql.jdbc.Driver
+        initialSize: 5
+        minIdle: 5
+        maxActive: 10
+        testWhileIdle: true
+        maxWait: 1000
+        validationQuery:  SELECT 1
+
